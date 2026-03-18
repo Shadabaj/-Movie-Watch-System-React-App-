@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# -Movie-Watch-System-React-App-
+A React-based Movie Watch System that lets users browse movies, view ratings, read descriptions, and manage a personalized watchlist. Built with modern UI and responsive design, it uses React hooks for state management and offers a smooth experience across devices. Easily extendable with APIs and user features.
+>>>>>>> 652e115e0b00e10117de5ecdd2f8b29df17185fb
