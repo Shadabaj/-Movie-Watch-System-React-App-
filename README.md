@@ -1,75 +1,72 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Movie Watchlist App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application for browsing a local collection of movies, filtering the catalog, and maintaining a watchlist during a session.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse movies loaded from `public/movies.json`.
+- Search movies by title.
+- Filter the catalog by genre and rating category.
+- Add or remove movies from a watchlist.
+- Navigate between the catalog and watchlist pages with React Router.
+- Reuse movie cards and shared header/footer components.
 
-### `npm start`
+The watchlist is held in React component state and is not persisted across a page reload. The catalog is based on local JSON data; this project does not currently require a movie API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router
+- Create React App / `react-scripts`
+- JavaScript and CSS
 
-### `npm test`
+## Run locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js and npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Install and start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+~~~bash
+npm ci
+npm start
+~~~
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The development server normally opens at `http://localhost:3000/`.
 
-### `npm run eject`
+### Test and build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+~~~bash
+npm test
+npm run build
+~~~
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+~~~text
+public/
+├── images/               # Movie artwork
+└── movies.json           # Local movie catalog
+src/
+├── component/
+│   ├── Header.js
+│   ├── Footer.js
+│   ├── MovieCard.js
+│   ├── MoviesGrid.js
+│   └── Watchlist.js
+├── App.js
+├── App.css
+└── styles.css
+~~~
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Next improvements
 
-## Learn More
+- Persist the watchlist with local storage or a backend.
+- Add empty/loading/error states for catalog data.
+- Add automated tests for search, filtering, and watchlist interactions.
+- Verify the current React and build-tool dependency combination with a clean install and production build before deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# -Movie-Watch-System-React-App-
-A React-based Movie Watch System that lets users browse movies, view ratings, read descriptions, and manage a personalized watchlist. Built with modern UI and responsive design, it uses React hooks for state management and offers a smooth experience across devices. Easily extendable with APIs and user features.
->>>>>>> 652e115e0b00e10117de5ecdd2f8b29df17185fb
+No license file is currently included. Add a license before inviting others to reuse or redistribute the project.
