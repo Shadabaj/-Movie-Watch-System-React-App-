@@ -1,8 +1,26 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+const originalFetch = global.fetch;
+
+beforeEach(() => {
+  global.fetch = jest.fn().mockResolvedValue({
+    json: jest.fn().mockResolvedValue([])
+  });
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+  if (originalFetch) {
+    global.fetch = originalFetch;
+  } else {
+    delete global.fetch;
+  }
+});
+
+test('renders the catalog and watchlist navigation', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /watchlist/i })).toBeInTheDocument();
 });
